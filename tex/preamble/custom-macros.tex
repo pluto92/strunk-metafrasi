@@ -1,0 +1,22 @@
+\newcommand{\translationsetup}[4]
+{
+    \makeatletter
+    \def\originalauthor{#1}
+    \def\yearpublished{#2}
+    \def\translatedtitle{#3}
+    \def\maintranslator{#4}
+    \makeatother
+}
+
+\newenvironment{preface}
+    {\vspace{-4ex}}
+    {\par\noindent\vspace{2ex}\hrulefill\par}
+
+% part patch
+
+\let\Oldpart\part
+% \newcommand{\parttitle}{}
+\renewcommand{\part}[1]{%
+    \Oldpart{#1}%
+    \renewcommand{\parttitle}{#1}%
+}%
