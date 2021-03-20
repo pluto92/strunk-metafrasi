@@ -77,42 +77,22 @@
             {\filcenter\LARGE\bfseries}
             [\vspace{5ex}\normalsize\titlerule]
 
-        % \titleformat{\section}[hang]
-        %     {}
-        %     {\Large\bfseries\makebox[1.7em][l]{\thesection}}
-        %     {1pc}
-        %     {\Large\bfseries}
-
-        % \titleformat{\subsection}[hang]
-        %     {}
-        %     {\large\bfseries\makebox[2.2em][l]{\thesubsection}}
-        %     {1pc}
-        %     {\large\bfseries}
-
     % toc formatting
 
-        % \setcounter{tocdepth}{2}
+        \setcounter{tocdepth}{0}
 
         \titlecontents{part}[0pt]
-            {\filcenter}{\thecontentslabel\\}{}
+            {\filcenter\bfseries}{\thecontentslabel\\}{}
             {}[\vspace{2ex}]
 
-        \titlecontents{chapter}[0pt]
-            {}{\thecontentslabel.\ }{}
-            {\hfill\thecontentspage}
+        \dottedcontents
+            {chapter} % section 
+            [0pt] % left 
+            {} % above-code 
+            {2em} % label width
+            {1pc} % leader width
 
-        % \titlecontents*{subsection}[45pt]
-        %     {\small}{}{}
-        %     % {\small}{\thecontentslabel\ }{}
-        %     {, \thecontentspage}[ \textbullet\ ][]
-
-        % \titlecontents*{subsubsection}[0pt]
-        %     {\small\itshape}{}{}
-        %     {, \thecontentspage}[ (][ -- ][)]
-
-% PAGE HEADER - STYLING - fancyheader or titleps
-
-    % \usepackage{titleps}
+% PAGE HEADER - STYLING - titleps
 
     \newpagestyle{texts}{
     \sethead %
