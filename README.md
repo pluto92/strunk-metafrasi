@@ -18,6 +18,8 @@
 
 ## Το κείμενο στα αγγλικά
 
+Το πρωτότυπο κείμενο στα αγγλικά μπορεί να βρεθεί στο archive.org, που παρέχει αρχεία που βρίσκονται στο public domain.
+
 ### To pdf στο archive
 https://archive.org/details/in.ernet.dli.2015.29049
 
