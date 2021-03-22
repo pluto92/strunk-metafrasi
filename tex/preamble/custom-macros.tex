@@ -1,11 +1,28 @@
-\newcommand{\translationsetup}[4]
+\newcommand{\translationsetup}[5]
 {
-    \makeatletter
     \def\originalauthor{#1}
     \def\yearpublished{#2}
     \def\translatedtitle{#3}
     \def\maintranslator{#4}
-    \makeatother
+
+    \pagestyle{texts}
+
+    \chapter[%
+        \originalauthor\ -- \emph{\translatedtitle}\ \yearpublished\\%
+        {\normalfont\emph{μετάφραση:} \maintranslator}%
+    ]{\originalauthor}
+
+    \begin{preface}%
+        #5%
+    \end{preface}%
+
+    \begin{center}
+        \textbf{\translatedtitle}
+    
+        μετάφραση: \maintranslator
+    \end{center}
+    
+    \noindent
 }
 
 \newenvironment{preface}
